@@ -9,7 +9,7 @@ module.exports = {
         return response.json(devs);
     },
 
-    async StorageEvent(request, response) {
+    async store(request, response) {
         const { github_username, techs, latitude, longitude } = request.body;
 
         var dev = await Dev.findOne({ github_username });
